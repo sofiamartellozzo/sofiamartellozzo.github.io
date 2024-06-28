@@ -3,65 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sofia Martellozzo - Personal Webpage</title>
+    <title>Sofia Martellozzo - Terminal</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* We'll add some basic styling here later */
-        
-    </style>
 </head>
 <body>
-    <header>
-        <h1>Sofia Martellozzo</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#social">Social Links</a></li>
-                <li><a href="#experience">Work Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="terminal">
+        <pre class="ascii-art">
 
-    <main>
-        <section id="home">
-            <h2>Welcome</h2>
-            <p>Hello, I'm Sofia and this is my personal webpage. [Add more introduction here]</p>
-        </section>
+             ____         __ _         __  __            _       _ _                   
+            / ___|  ___  / _(_) __ _  |  \/  | __ _ _ __| |_ ___| | | ___ ___________  
+            \___ \ / _ \| |_| |/ _` | | |\/| |/ _` | '__| __/ _ \ | |/ _ \_  /_  / _ \ 
+             ___) | (_) |  _| | (_| | | |  | | (_| | |  | ||  __/ | | (_) / / / / (_) |
+            |____/ \___/|_| |_|\__,_| |_|  |_|\__,_|_|   \__\___|_|_|\___/___/___\___/ 
+                                                                                       
+                                                                              
+        </pre>
+        <div class="content">
+            <section id="home">
+                <p class="prompt">$ cat welcome.txt</p>
+                <p>Hello, I'm Sofia and this is my personal webpage. I'm a computer science engineer passionate about [your interests].</p>
+            </section>
 
-        <section id="social">
-            <h2>Connect with me</h2>
-            <ul>
-                <li><a href="https://github.com/sofiamartellozzo" target="_blank">GitHub</a></li>
-                <li><a href="https://www.linkedin.com/in/sofia-martellozzo" target="_blank">LinkedIn</a></li>
-                <li><a href="mailto:sofia.martellozzo@mail.polimi.it">Email</a></li>
-                <li><a href="data/SofiaMartellozzoCV.pdf" target="_blank">CV</a></li>
-            </ul>
-        </section>
+            <section id="social">
+                <p class="prompt">$ ls social_links</p>
+                <ul>
+                    <li><a href="https://github.com/sofiamartellozzo" target="_blank">github.com/sofiamartellozzo</a></li>
+                    <li><a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">linkedin.com/in/your-profile</a></li>
+                    <li><a href="mailto:your.email@example.com">your.email@example.com</a></li>
+                    <li><a href="path-to-your-cv.pdf" target="_blank">cv.pdf</a></li>
+                </ul>
+            </section>
 
-        <section id="experience">
-            <h2>Work Experience</h2>
-            <!-- Add your work experience here -->
-            <article>
-                <h3>Job Title</h3>
-                <p>Company Name | Start Date - End Date</p>
-                <p>Description of your role and achievements</p>
-            </article>
-        </section>
+            <section id="experience">
+                <p class="prompt">$ cat work_experience.log</p>
+                <pre>
+[Job Title]
+Company: [Company Name]
+Period: [Start Date] - [End Date]
+Description: [Brief description of your role and achievements]
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <!-- Add your projects here -->
-            <article>
-                <h3>Project Name</h3>
-                <p>Brief description of the project</p>
-                <a href="project-link">View Project</a>
-            </article>
-        </section>
-    </main>
+[Another Job Title]
+Company: [Another Company Name]
+Period: [Start Date] - [End Date]
+Description: [Brief description of your role and achievements]
+                </pre>
+            </section>
 
-    <footer>
-        <p>&copy; 2024 Sofia Martellozzo. All rights reserved.</p>
-    </footer>
+            <section id="projects">
+                <p class="prompt">$ ls projects/</p>
+                <ul>
+                    <li><a href="project-link-1">Project1.py</a></li>
+                    <li><a href="project-link-2">Project2.cpp</a></li>
+                    <li><a href="project-link-3">Project3.java</a></li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

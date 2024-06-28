@@ -1,60 +1,96 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-header {
-    background-color: #f4f4f4;
-    padding: 1rem;
-    text-align: center;
-}
-
-nav ul {
-    list-style-type: none;
+/* Base styles for the entire page */
+body, html {
+    margin: 0;
     padding: 0;
+    background-color: #0c0c0c; /* Dark background for the whole page */
+    color: #98fb98; /* Pale green text color */
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for terminal look */
+    line-height: 1.6; /* Increased line height for better readability */
+    font-size: 16px; /* Base font size */
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 10px;
+/* Styles for the main terminal container */
+.terminal {
+    max-width: 900px; /* Increased max-width for wider screens */
+    margin: 20px auto; /* Center the terminal on the page */
+    padding: 20px;
+    background-color: #1a1a1a; /* Slightly lighter background for the terminal */
+    border: 1px solid #3a3a3a; /* Subtle border */
+    box-shadow: 0 0 10px rgba(152, 251, 152, 0.3); /* Soft glow effect */
 }
 
-/* General link styles */
+/* Styles for the ASCII art title */
+.ascii-art {
+    color: #4ade80; /* Brighter green for the ASCII art */
+    font-size: 14px; /* Increased font size for larger ASCII art */
+    line-height: 1.2; /* Tighter line height for ASCII art */
+    margin-bottom: 20px;
+    white-space: pre; /* Preserve ASCII art formatting */
+    display: block; /* Ensure it's on its own line */
+   /* text-align: center; /* Center the ASCII art */
+}
+
+/* Styles for command prompts */
+.prompt {
+    color: #66d9ef; /* Light blue color for prompts */
+}
+
+/* Styles for links */
 a {
-    text-decoration: none;  /* Removes the underline */
-    color: #00008B;  
-    transition: color 0.3s ease;  /* Smooth color transition on hover */
+    color: #4ade80; /* Brighter green for links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
 }
 
 /* Hover effect for links */
 a:hover {
-    color: #4169E1;  
+    color: #f1fa8c; /* Light yellow on hover */
 }
 
-/* Specific styles for navigation links, if needed */
-nav a {
-    color: #00008B;  /* Dark blue */
+/* Styles for unordered lists */
+ul {
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 20px; /* Add some left padding */
 }
 
-nav a:hover {
-    color: #4169E1;  /* Light blue */
+/* Custom bullets for list items */
+ul li::before {
+    content: "- "; /* Use dash as bullet */
+    color: #66d9ef; /* Light blue color for bullets */
 }
 
-h1, h2, h3 {
-    color: #2c3e50;
+/* Styles for preformatted text (like code blocks) */
+pre {
+    white-space: pre-wrap; /* Wrap long lines */
 }
 
+/* Spacing for sections */
 section {
-    margin-bottom: 2rem;
+    margin-bottom: 30px; /* Add space between sections */
 }
 
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #f4f4f4;
-    margin-top: 2rem;
+/* Optional: Add a subtle text shadow for better readability */
+body {
+    text-shadow: 0 0 2px rgba(152, 251, 152, 0.2);
+}
+
+/* Increase line height for better text separation */
+body {
+    line-height: 1.8;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    .terminal {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .ascii-art {
+        font-size: 8px; /* Smaller ASCII art on mobile */
+    }
+
+    body {
+        font-size: 14px; /* Slightly smaller font on mobile */
+    }
 }
