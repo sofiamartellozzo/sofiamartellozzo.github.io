@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #f4f4f4;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+/* General link styles */
+a {
+    text-decoration: none;  /* Removes the underline */
+    color: #00008B;  
+    transition: color 0.3s ease;  /* Smooth color transition on hover */
+}
+
+/* Hover effect for links */
+a:hover {
+    color: #4169E1;  
+}
+
+/* Specific styles for navigation links, if needed */
+nav a {
+    color: #00008B;  /* Dark blue */
+}
+
+nav a:hover {
+    color: #4169E1;  /* Light blue */
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    margin-top: 2rem;
+}
