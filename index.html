@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sofia Martellozzo - Terminal</title>
+    <title>Sofia Martellozzo</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -21,44 +21,105 @@
         <div class="content">
             <section id="home">
                 <p class="prompt">$ cat welcome.txt</p>
-                <p>Hello, I'm Sofia and this is my personal webpage. I'm a computer science engineer passionate about [your interests].</p>
+                <p>Hello, I'm Sofia and this is my personal webpage.
+
+                    I'm an Italian computer scientist with a passion for artificial intelligence and an insatiable curiosity for, well, pretty much everything. If you're interested in connecting or collaborating, don't hesitate to reach out!</p>
             </section>
 
             <section id="social">
                 <p class="prompt">$ ls social_links</p>
                 <ul>
-                    <li><a href="https://github.com/sofiamartellozzo" target="_blank">github.com/sofiamartellozzo</a></li>
-                    <li><a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">linkedin.com/in/your-profile</a></li>
-                    <li><a href="mailto:your.email@example.com">your.email@example.com</a></li>
-                    <li><a href="path-to-your-cv.pdf" target="_blank">cv.pdf</a></li>
+                    <li><a href="https://github.com/sofiamartellozzo" target="_blank">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/sofia-martellozzo" target="_blank">LinkedIn</a></li>
+                    <li><a href="mailto:sofia.martellozzo@mail.polimi.it">sofia.martellozzo@mail.polimi.it</a></li>
+                    <li><a href="data/SofiaMartellozzoCV.pdf" target="_blank">cv.pdf</a></li>
                 </ul>
             </section>
 
             <section id="experience">
                 <p class="prompt">$ cat work_experience.log</p>
-                <pre>
-[Job Title]
-Company: [Company Name]
-Period: [Start Date] - [End Date]
-Description: [Brief description of your role and achievements]
+                <p class="jobs"><b>[Machine Learning Engineer]</b>
+Company: ContentWise
+Period: April 2024 - June 2024
+Description: 
+I have been involved in the development of an automated infrastructure for a project focused on license plate detection and vehicle origin identification from various image formats. Key responsibilities and achievements included:
+- Architected and implemented a robust pipeline using ClearML, leveraging AWS services and Terraform for infrastructure as code.
+- Developed custom autoscaling solutions and interactive dashboards to optimize resource usage and provide real-time project insights.
+- Created alert services integrating with Slack and email systems for efficient error reporting and monitoring.
+- Implemented fine-tuning processes for a SWIN model to enhance country-of-origin identification accuracy.
+- Engaged directly with clients, preparing and delivering progress presentations and updates.
+- Authored comprehensive documentation for project replication, including code explanations and step-by-step guides.
+- Collaborated with team members, integrating their algorithms into the broader infrastructure.
+This role significantly enhanced my skills in MLOps, cloud infrastructure, client communication, and end-to-end project delivery.
 
-[Another Job Title]
-Company: [Another Company Name]
-Period: [Start Date] - [End Date]
-Description: [Brief description of your role and achievements]
-                </pre>
+<b>[Machine Learning Research Intern]</b>
+Company: ContentWise
+Period: September 2023 - April 2024
+Description: 
+Conducted extensive research and development for my master's thesis, focusing on creating an advanced hybrid search system for streaming platforms. Key aspects of the project included:
+- Developed a semantic search service utilizing custom embedding models, integrated with keyword search for a comprehensive hybrid system tailored to the movies/series domain.
+- Created a synthetic dataset leveraging company and client data, employing GPT APIs with specific prompts to generate diverse, relevant queries and responses.
+- Evaluated and tested various open-source embedding models, assessing their performance in data restriction and multilingual search scenarios.
+- Implemented and compared different fine-tuning strategies including full model updates, Adapter, and LoRA techniques to optimize model performance.
+- Integrated the best-performing fine-tuned model with Weaviate, a vector database, to create a robust hybrid search service combining semantic search and keyword search (BM25 algorithm).
+- Conducted thorough evaluations and engaged in discussions to select the most suitable vector database for the project requirements.
+This internship provided invaluable experience in applied machine learning research, large language models, and the development of practical, industry-focused AI solutions.
+
+For a detailed overview of the research and methodologies employed, please refer to my thesis: <a href="https://www.politesi.polimi.it/handle/10589/219787" target="_blank">Integrating semantic and keyword search: a transformer-based approach for content discovery</a>
+</p>
             </section>
 
             <section id="projects">
                 <p class="prompt">$ ls projects/</p>
                 <ul>
-                    <li><a href="project-link-1">Project1.py</a></li>
-                    <li><a href="project-link-2">Project2.cpp</a></li>
-                    <li><a href="project-link-3">Project3.java</a></li>
+                    <li>
+                        <a href="https://github.com/sofiamartellozzo/applied_AI_in_biomedicine" target="_blank">applied_ai_in_biomedicine.ipynb</a>
+                        <a href="#" class="read-more">Read more...</a>
+                        <div class="project-description" style="display: none;">
+                            <p>This project focuses on developing a deep learning-based classifier for diagnosing pneumonia and tuberculosis using chest X-ray images (CXRs). Utilizing a dataset of 15,470 CXRs, we explored various convolutional neural network (CNN) architectures, including a custom Naive CNN, DarkNet, VGG19, and CoroNet. The CoroNet model, based on the Xception architecture, demonstrated the highest accuracy at 97%, effectively assisting in reducing diagnostic errors in lung disease detection. Advanced preprocessing and data augmentation techniques were employed to enhance model performance, and explainable AI methods provided insights into the models' decision-making processes. This classifier aims to support radiologists by improving diagnostic accuracy and efficiency in identifying critical lung conditions.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="https://github.com/sofiamartellozzo/OLA_project" target="_blank">OLA.py</a>
+                        <p>This project focuses on optimizing pricing strategies for the e-commerce platform ANS2. The primary objective is to maximize revenue while minimizing cumulative regret using reinforcement learning techniques, particularly Multi-Armed Bandit algorithms. Through Monte Carlo simulations, Dynamic Programming, UCB-1, and Thompson Sampling algorithms, the project addresses challenges like uncertain conversion rates, varying demand curves, and customer feature-based pricing. Results indicate that Thompson Sampling generally outperforms UCB-1, adapting better to uncertainties and providing effective pricing strategies. This project exemplifies the application of advanced reinforcement learning techniques to achieve optimal e-commerce pricing.</p>
+                    </li>
+                    <li>
+                        <a href="https://github.com/sofiamartellozzo/AN2DL_Homeworks" target="_blank">advanced_neural_network.ipynb</a>
+                        <p>As part of my coursework in the Advanced Neural Networks and Deep Learning (AN2DL) course, I undertook two projects focusing on different aspects of neural network applications.
+
+                        The first project involved image classification of plant species using a dataset of 3542 images across 8 classes. Given the dataset's small size, I employed data augmentation, transfer learning, and fine-tuning of pre-trained models such as VGG16, VGG19, and Xception. The final model, an ensemble of these architectures, achieved an accuracy of 86%.
+                            
+                        The second project focused on classifying multivariate time series data into 12 classes with a highly imbalanced dataset. I experimented with various neural network models, including LSTM, BiLSTM, and 1D CNNs, using data augmentation techniques like SMOTE and preprocessing methods such as normalization and standardization. The ResNet model, which incorporated 1D convolutional layers and batch normalization, emerged as the best performer with an accuracy of 68.2%.</p>
+                    </li>
+                    <li>
+                        <a href="https://github.com/sofiamartellozzo/movieRecommendation" target="_blank">movie_recommendation.ipynb</a>
+                        <p>I developed a movie recommendation system as part of the "Numerical Analysis for Machine Learning" course. The project combined collaborative filtering, content-based filtering, and neural networks to predict user ratings and suggest movies. Utilizing a dataset of 10,329 movies and 105,339 user ratings, the system achieved high precision and recall, demonstrating the effectiveness of hybrid filtering techniques and advanced machine learning models.</p>
+                    </li>
+                    <li>
+                        <a href="" target="_blank">advanced_algorithms_parallel_programming.cpp</a>
+                        <p>This project encompassed two main challenges about algorithm optimization and parallel computing.
+
+                        The first challenge involved creating a Maze Generator using the disjoint-set data structure. The algorithm began by generating a set of cells and walls, then employed the disjoint-set to compute a random maze. The solution was tested with a Depth First Search (DFS) algorithm. 
+                        To enhance the algorithm, I implemented two key optimizations: updating the parent of a node and its children if the parent was not itself, and incorporating path compression in the Find_Set function to efficiently update the representative parent.
+                            
+                        The second challenge focused on parallelizing the grep function using the Message Passing Interface (MPI). The grep function searches for a specified word within a text, scanning each row for occurrences. By utilizing MPI, I distributed the search workload across multiple parallel processes. 
+                            
+                        Through this project, I demonstrated my ability to address complex algorithmic challenges and apply advanced techniques in parallel computing.</p>
+                    </li>
+                    <li>
+                        <a href="" target="_blank">data_quality.ipynb</a>
+                        <p>The objective of this project is to evaluate how different imputation techniques affect the performance of classification algorithms on a dataset. The dataset included 2001 samples with 17 features and a target feature representing 26 different letters. I introduced varying amounts of missing values and used Mode Imputation and K-Nearest Neighbors (KNN) Imputation to handle these gaps.
+                        I applied two machine learning algorithms for classification: Support Vector Classifier (SVC) and Decision Tree Classifier. Their performance was measured using accuracy, precision, recall, and F1-score. The imputation techniques were evaluated by comparing the imputed datasets with the original dataset. 
+                        This project underscored the significance of effective data preprocessing and imputation in machine learning, demonstrating my capability to handle data quality issues and evaluate machine learning models.</p>
+                    </li>
+                    <li>
+                        <a href="" target="_blank"></a>
+                        <p></p>
+                    </li>
                 </ul>
             </section>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="script.js"></script> 
 </body>
 </html>

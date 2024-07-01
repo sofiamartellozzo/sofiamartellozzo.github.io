@@ -1,3 +1,4 @@
+
 /* Base styles for the entire page */
 body, html {
     margin: 0;
@@ -60,7 +61,7 @@ ul li::before {
 }
 
 /* Styles for preformatted text (like code blocks) */
-pre {
+.jobs {
     white-space: pre-wrap; /* Wrap long lines */
 }
 
@@ -93,4 +94,17 @@ body {
     body {
         font-size: 14px; /* Slightly smaller font on mobile */
     }
+}
+
+.read-more {
+    display: block;
+    margin-top: 5px;
+    color: #66d9ef;
+    cursor: pointer;
+}
+
+.project-description {
+    margin-top: 10px;
+    padding-left: 20px;
+    border-left: 2px solid #66d9ef;
 }
