@@ -1,15 +1,18 @@
 document.addEventListener('DOMContentLoaded', (event) => {
+    // Select the main content container and all its section elements
     const content = document.querySelector('.content');
     const sections = Array.from(content.querySelectorAll('section'));
     let currentSectionIndex = 0;
 
     // Store the original content and remove it from the DOM
+    // To prevent the content from being visible before the animation starts
     const originalContent = sections.map(section => {
         const clone = section.cloneNode(true);
         section.innerHTML = '';
         return clone;
     });
 
+    // Function to process each section sequentially
     function processNextSection() {
         if (currentSectionIndex >= sections.length) return;
 
@@ -17,6 +20,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const originalSection = originalContent[currentSectionIndex];
         const sectionId = section.id;
 
+        // Handle different sections based on their ID
         if (sectionId === 'home' || sectionId === 'social') {
             typeSection(section, originalSection, () => {
                 currentSectionIndex++;
@@ -37,6 +41,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     }
 
+    // Function to type out the content of a section element by element
     function typeSection(section, originalSection, callback) {
         const elements = Array.from(originalSection.children);
         let elementIndex = 0;
@@ -62,6 +67,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         typeNextElement();
     }
 
+    // Function to type out just the prompt of a section
     function typePrompt(section, originalSection, callback) {
         const originalPrompt = originalSection.querySelector('.prompt');
         const newPrompt = originalPrompt.cloneNode(true);
@@ -72,17 +78,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
         typeHTML(newPrompt, originalHTML, callback);
     }
 
+    // Function to show all job information at once
     function showJobs(section, originalSection) {
         const jobsElement = originalSection.querySelector('.jobs');
         section.appendChild(jobsElement.cloneNode(true));
     }
 
+    // Function to show all projects at once and set up 'Read more' functionality
     function showProjects(section, originalSection) {
         const projectsList = originalSection.querySelector('ul');
         section.appendChild(projectsList.cloneNode(true));
         setupReadMore(); // Call this after adding the projects content
     }
 
+    // Function to type out HTML content, preserving HTML structure
     function typeHTML(element, html, callback) {
         let tempDiv = document.createElement('div');
         tempDiv.innerHTML = html;
@@ -99,6 +108,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             let currentNode = nodes[currentNodeIndex];
 
             if (currentNode.nodeType === Node.TEXT_NODE) {
+                // For text nodes, type out character by character
                 if (currentTextIndex < currentNode.length) {
                     element.innerHTML += currentNode.textContent[currentTextIndex];
                     currentTextIndex++;
@@ -109,6 +119,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     typeNextChar();
                 }
             } else if (currentNode.nodeType === Node.ELEMENT_NODE) {
+                // For element nodes, add the whole element at once
                 let newElement = currentNode.cloneNode(true);
                 element.appendChild(newElement);
                 currentNodeIndex++;
