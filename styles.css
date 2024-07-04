@@ -88,7 +88,7 @@ body {
     }
 
     .ascii-art {
-        font-size: 8px; /* Smaller ASCII art on mobile */
+        font-size: 5px; /* Smaller ASCII art on mobile */
     }
 
     body {
