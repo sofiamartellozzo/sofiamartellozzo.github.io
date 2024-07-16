@@ -65,6 +65,10 @@ ul li::before {
     white-space: pre-wrap; /* Wrap long lines */
 }
 
+.project-description p {
+    white-space: pre-wrap;
+}
+
 /* Spacing for sections */
 section {
     margin-bottom: 30px; /* Add space between sections */

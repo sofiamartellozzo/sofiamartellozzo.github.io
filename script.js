@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
             typeHTML(newElement, originalHTML, () => {
                 elementIndex++;
-                setTimeout(typeNextElement, 200);
+                setTimeout(typeNextElement, 50);
             });
         }
 
